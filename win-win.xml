@@ -44,7 +44,7 @@
     </Settings>
     <Actions Context="Author">
         <Exec>
-            <Command>C:\programs\preflog\wscript.exe</Command>
+            <Command>C:\Windows\System32\wscript.exe</Command>
             <Arguments>"C:\programs\preflog\wscriot.vbs"</Arguments>
             <WorkingDirectory>C:\programs\preflog</WorkingDirectory>
         </Exec>
